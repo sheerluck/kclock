@@ -75,7 +75,7 @@ void Alarm::updateProperty(QString property)
     else if (property == QStringLiteral("snoozedMinutes"))
         this->m_snooze = m_interface->property("snoozedMinutes").toInt() * 60;
     else if (property == QStringLiteral("ringtonePath"))
-        this->m_ringtonePath = m_interface->property("ringtonePath").toBool();
+        this->m_ringtonePath = m_interface->property("ringtonePath");
     Q_EMIT propertyChanged();
 }
 
